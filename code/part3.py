@@ -37,7 +37,7 @@ name_mapping = {
     "North Korea": "DPR Korea",
     "Gambia": "The Gambia",
     "Kyrgyzstan": "Kyrgyz Republic",
-    "saint Lucia": "St. Lucia"
+    "Saint Lucia": "St. Lucia"
 }
 
 # Apply mapping
@@ -52,6 +52,7 @@ avg_fifa_pts = fifa_rankings['points'].mean()
 form_data = []
 
 # loop through each of the 48 standard teams
+defaulted = {}
 for team in wc_48_team_list:
     # Get all matches involving this team
     team_matches = df[(df['home_team'] == team) | (df['away_team'] == team)].sort_values('date', ascending=False)
@@ -89,7 +90,11 @@ for team in wc_48_team_list:
 
         # Lookup opponent FIFA points
         opp_pts = fifa_rankings.loc[fifa_rankings['team'] == opp_name, 'points'].values
-        opp_fifa_pts = opp_pts[0] if len(opp_pts) > 0 else avg_fifa_pts
+        if len(opp_pts) > 0:
+            opp_fifa_pts = opp_pts[0]
+        else:
+            opp_fifa_pts = avg_fifa_pts
+            defaulted[opp_name] = defaulted.get(opp_name, 0) + 1
 
         # Weighted goals calculation
         adj_gf_list.append(gf * (opp_fifa_pts / avg_fifa_pts))
@@ -108,5 +113,9 @@ for team in wc_48_team_list:
     })
 
 form_df = pd.DataFrame(form_data)
+
+assert len(form_df) == 48, f"Expected 48 teams, got {len(form_df)}"
+print("Opponents given the default weight (not in the FIFA ranking):", defaulted)
+
 form_df.to_csv('data/processed/form.csv', index=False)
 print("form.csv successfully created.")
