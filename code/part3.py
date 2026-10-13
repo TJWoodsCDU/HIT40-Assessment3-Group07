@@ -29,7 +29,15 @@ name_mapping = {
     "Iran": "IR Iran",
     "South Korea": "Korea Republic",
     "Turkey": "Türkiye",
-    "United States": "USA"
+    "United States": "USA",
+
+    #opponnents outside the 48
+
+    "China": "China PR",
+    "North Korea": "DPR Korea",
+    "Gambia": "The Gambia",
+    "Kyrgyzstan": "Kyrgyz Republic",
+    "saint Lucia": "St. Lucia"
 }
 
 # Apply mapping
