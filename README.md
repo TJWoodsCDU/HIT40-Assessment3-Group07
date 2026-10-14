@@ -52,3 +52,12 @@ If one step fails, the message says what to fix.
 - Form is adjusted for opponent strength using FIFA points. Nine team-match rows (opponents not in the FIFA ranking) use the default weight.
 - Rest days are capped at 10 days. Uruguay's last match before the tournament was on 31 March, which would otherwise count 76 days of rest.
 - The model evaluation uses repeated 5-fold cross validation, keeping the two rows of a match together in Model 2.2.
+
+References
+[1] FBref. (2026). World Cup Scores & Fixtures. https://fbref.com/en/comps/1/schedule/schedule-Stats
+[2] FBref. (2026). World Cup squad statistics. https://fbref.com/en/comps/1/2026/stats/2026-World-Cup-Stats
+[3] FIFA. (2026, 11 June). Argentina reclaim top spot in the FIFA/Coca-Cola Men’s World Ranking. https://inside.fifa.com/fifa-world-ranking/men/news/argentina-reclaim-top-spot-mens-world-ranking-fifa-coca-cola
+[4] Transfermarkt. (2026). World Cup 2026 participating teams (group’s archived snapshot dated 10 June 2026). (https://web.archive.org/web/20260612015826/https://www.transfermarkt.com/world-cup/teilnehmer/pokalwettbewerb/FIWC/)
+[5] martj42. (n.d.). International football results [Data set]. GitHub. https://github.com/martj42/international_results
+
+
