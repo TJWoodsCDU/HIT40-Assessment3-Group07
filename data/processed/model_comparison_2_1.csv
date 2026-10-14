@@ -1,0 +1,7 @@
+algorithm,R2,R2_sd,RMSE,RMSE_sd,MAE
+Ridge regression,0.4129,0.0166,1.5432,0.0218,1.2266
+Lasso regression,0.3851,0.0246,1.5791,0.0315,1.2401
+Linear regression,0.3744,0.0269,1.5928,0.0341,1.2509
+Random forest,0.3741,0.0374,1.5929,0.0472,1.2638
+Gradient boosting,0.3597,0.0393,1.611,0.0503,1.273
+Baseline (always the mean),-0.0322,0.0208,2.0464,0.0206,1.6005

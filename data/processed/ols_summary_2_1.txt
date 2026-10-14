@@ -1,0 +1,42 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              goal_diff   R-squared:                       0.506
+Model:                            OLS   Adj. R-squared:                  0.464
+Method:                 Least Squares   F-statistic:                     12.17
+Date:                Wed, 14 Oct 2026   Prob (F-statistic):           7.85e-12
+Time:                        15:15:33   Log-Likelihood:                -183.72
+No. Observations:                 104   AIC:                             385.4
+Df Residuals:                      95   BIC:                             409.2
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const               0.1280      0.154      0.830      0.409      -0.178       0.434
+fifa_pts_diff       0.0018      0.001      1.223      0.225      -0.001       0.005
+recent_ppg_diff    -0.0779      0.229     -0.340      0.735      -0.533       0.377
+adj_gf_diff         0.2415      0.279      0.867      0.388      -0.312       0.795
+adj_ga_diff         0.6088      0.546      1.115      0.268      -0.475       1.693
+value_ratio_log     0.4237      0.231      1.830      0.070      -0.036       0.883
+host_adv            0.7000      0.432      1.619      0.109      -0.158       1.558
+rest_diff           0.1801      0.147      1.223      0.224      -0.112       0.472
+top5_share_diff     0.3417      0.782      0.437      0.663      -1.210       1.893
+==============================================================================
+Omnibus:                        0.337   Durbin-Watson:                   2.123
+Prob(Omnibus):                  0.845   Jarque-Bera (JB):                0.506
+Skew:                           0.038   Prob(JB):                        0.776
+Kurtosis:                       2.667   Cond. No.                     1.33e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.33e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Most influential rows (Cook's distance; rule of thumb: above 0.038):
+ row  cooks_distance
+  26        0.177225
+  14        0.091507
+  93        0.082421
+  13        0.073083
+  35        0.056818

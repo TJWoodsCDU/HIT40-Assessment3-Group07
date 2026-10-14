@@ -1,0 +1,9 @@
+variable,pearson_r,p_value,spearman_rho
+value_ratio_log,0.6628,0.0,0.6632
+fifa_pts_diff,0.6469,0.0,0.6642
+top5_share_diff,0.5811,0.0,0.6174
+adj_gf_diff,0.4809,0.0,0.4965
+recent_ppg_diff,0.4719,0.0,0.4078
+adj_ga_diff,0.4171,0.0,0.4006
+host_adv,0.16,0.1047,0.1537
+rest_diff,0.0882,0.3733,0.0573

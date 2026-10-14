@@ -1,0 +1,42 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           goals_scored   R-squared:                       0.288
+Model:                            OLS   Adj. R-squared:                  0.259
+Method:                 Least Squares   F-statistic:                     11.48
+Date:                Wed, 14 Oct 2026   Prob (F-statistic):           1.58e-11
+Time:                        15:16:17   Log-Likelihood:                -328.36
+No. Observations:                 208   AIC:                             674.7
+Df Residuals:                     199   BIC:                             704.8
+Df Model:                           8                                         
+Covariance Type:              cluster                                         
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const              2.4239      2.689      0.902      0.367      -2.846       7.694
+opp_fifa_pts      -0.0025      0.001     -3.327      0.001      -0.004      -0.001
+t_adj_gf           0.2888      0.197      1.468      0.142      -0.097       0.674
+opp_adj_ga         0.2362      0.436      0.542      0.588      -0.618       1.091
+t_value_log        0.3785      0.087      4.353      0.000       0.208       0.549
+knockout          -0.1337      0.212     -0.632      0.527      -0.548       0.281
+final_group_md     0.0729      0.229      0.318      0.751      -0.377       0.522
+t_forwards        -0.0604      0.048     -1.249      0.212      -0.155       0.034
+t_squad_age        0.0205      0.071      0.289      0.773      -0.118       0.159
+==============================================================================
+Omnibus:                       23.172   Durbin-Watson:                   1.989
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               33.945
+Skew:                           0.670   Prob(JB):                     4.26e-08
+Kurtosis:                       4.456   Cond. No.                     5.65e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (CRV1)
+[2] The condition number is large, 5.65e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Most influential rows (Cook's distance; rule of thumb: above 0.019):
+ row  cooks_distance
+ 204        0.075883
+  52        0.063013
+  17        0.047126
+  27        0.044766
+  90        0.040510

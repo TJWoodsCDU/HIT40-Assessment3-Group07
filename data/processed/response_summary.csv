@@ -1,0 +1,14 @@
+measure,value
+Matches (rows in Model 2.1),104.0
+Goal difference: mean,0.481
+Goal difference: standard deviation,2.024
+Goal difference: share of draws,0.231
+Goal difference: largest win margin,6.0
+"Baseline RMSE, always predict 0 (Model 2.1)",2.071
+"Baseline RMSE, always predict the mean (Model 2.1)",2.014
+Team rows (rows in Model 2.2),208.0
+Goals per team: mean,1.481
+Goals per team: variance,1.942
+Dispersion = variance / mean (1 = Poisson),1.311
+Share of team rows with 0 goals,0.264
+"Baseline RMSE, always predict the mean (Model 2.2)",1.39

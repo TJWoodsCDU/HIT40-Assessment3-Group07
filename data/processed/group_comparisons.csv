@@ -1,0 +1,5 @@
+comparison,knockout,group,difference,p_value,third group match,other,note
+Goals per team: knockout vs group stage,1.45 (n=64),1.49 (n=144),-0.04,0.838,,,
+Goals per team: third group match vs other matches,,,0.08,0.732,1.54 (n=48),1.46 (n=160),
+Host's goal difference when playing at home (test: is it above 0?),,,1.15,0.101,,,n=13 matches only
+Is goal difference centred on 0? (Team A / Team B order check),,,0.48,0.017,,,"should not be significant, otherwise the A/B order matters"
