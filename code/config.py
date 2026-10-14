@@ -1,4 +1,3 @@
-
 from pathlib import Path
 import pandas as pd
 
@@ -13,8 +12,9 @@ N_ROWS_22 = 208        # Model 2.2: one row per team per match
 N_FEATURES = 8         # exactly 8 explanatory variables in each model
 MAX_SHARED = 4         # at most 4 variables shared between the two models
 
-# Model 2.1 (goal difference): variable name 
+REST_CAP_DAYS = 10
 
+# Model 2.1 (goal difference): variable name .
 FEATURES_21 = {
     "fifa_pts_diff":   "fifa_pts",
     "recent_ppg_diff": "recent_ppg",
