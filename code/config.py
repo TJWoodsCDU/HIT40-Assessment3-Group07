@@ -1,7 +1,8 @@
 from pathlib import Path
 import pandas as pd
 
-HERE = Path(__file__).parent
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent                         # the repo folder: code/ and data/ sit side by side
 
 # Every clue must come from BEFORE this date (the first World Cup match).
 CUTOFF = pd.Timestamp("2026-06-11")
@@ -48,6 +49,6 @@ FORBIDDEN_WORDS = ["goals_a", "goals_b", "goal_diff", "goals_scored", "shots", "
                    "possession", "fouls", "corners", "cards", "attendance"]
 
 
-DATA_DIR = HERE / "data"        # put matches.csv, teams.csv and form.csv here
-OUT_DIR = HERE / "outputs"      # every table and figure is saved here
+DATA_DIR = ROOT / "data" / "processed"     # inputs from Parts 1-3: matches.csv, teams.csv, form.csv
+OUT_DIR = ROOT / "data" / "processed"      # every dataset, table and figure from Part 4 is saved here too
 OUT_DIR.mkdir(parents=True, exist_ok=True)
