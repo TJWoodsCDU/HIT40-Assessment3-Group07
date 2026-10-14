@@ -3,7 +3,7 @@ import pandas as pd
 
 HERE = Path(__file__).parent
 
-
+# Every clue must come from BEFORE this date (the first World Cup match).
 CUTOFF = pd.Timestamp("2026-06-11")
 
 # Rules from the brief
@@ -12,9 +12,12 @@ N_ROWS_22 = 208        # Model 2.2: one row per team per match
 N_FEATURES = 8         # exactly 8 explanatory variables in each model
 MAX_SHARED = 4         # at most 4 variables shared between the two models
 
+# Rest days are capped at this many days. Beyond about a week and a half extra rest makes no difference,
+# and an uncapped value lets one team (for example a long gap before its first match) dominate the regression.
 REST_CAP_DAYS = 10
 
-# Model 2.1 (goal difference): variable name .
+# Model 2.1 (goal difference): variable name -> the underlying statistic it is built from.
+# The statistic tag is only used to count how many statistics the two models share.
 FEATURES_21 = {
     "fifa_pts_diff":   "fifa_pts",
     "recent_ppg_diff": "recent_ppg",
@@ -27,6 +30,8 @@ FEATURES_21 = {
 }
 
 # Model 2.2 (goals scored by one team).
+# Possible swap discussed with the team: replace t_forwards and t_squad_age with
+# "t_top5_share": "top5_share"  (builder already exists) and a World Cup experience variable.
 FEATURES_22 = {
     "opp_fifa_pts":   "fifa_pts",
     "t_adj_gf":       "adj_gf",
@@ -38,17 +43,11 @@ FEATURES_22 = {
     "t_squad_age":    "squad_age",
 }
 
-
+# Column names that must never be used as clues (they only exist after the match).
 FORBIDDEN_WORDS = ["goals_a", "goals_b", "goal_diff", "goals_scored", "shots", "xg",
                    "possession", "fouls", "corners", "cards", "attendance"]
 
 
-def data_dir(mode):
-    """mode is 'dummy' or 'real'."""
-    return HERE / "data" / mode
-
-
-def out_dir(mode):
-    d = HERE / "outputs" / mode
-    d.mkdir(parents=True, exist_ok=True)
-    return d
+DATA_DIR = HERE / "data"        # put matches.csv, teams.csv and form.csv here
+OUT_DIR = HERE / "outputs"      # every table and figure is saved here
+OUT_DIR.mkdir(parents=True, exist_ok=True)

@@ -95,15 +95,15 @@ def run(model, d, feats, response, label, out):
     print(vif.round(2).to_string(index=False))
 
 
-def main(mode):
-    out = C.out_dir(mode)
+def main():
+    out = C.OUT_DIR
     d21 = pd.read_csv(out / "dataset_2_1.csv")
     d22 = pd.read_csv(out / "dataset_2_2.csv")
-    print(f"=== EDA ({mode} data) ===")
+    print("=== EDA ===")
     run("2_1", d21, C.FEATURES_21, "goal_diff", "goal_diff", out)
     run("2_2", d22, C.FEATURES_22, "goals_scored", "goals_scored", out)
     print(f"\nSaved tables and figures to {out}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "dummy")
+    main()

@@ -1,4 +1,3 @@
-
 import re
 from pathlib import Path
 
@@ -11,8 +10,7 @@ OUT = ROOT / "data" / "processed" / "teams.csv"
 
 CUTOFF_DATE = pd.Timestamp("2026-06-11")               # first World Cup match
 
-
-MARKET_VALUE_DATE = None
+MARKET_VALUE_DATE = pd.Timestamp("2026-06-10")
 
 TOP5_FIRST_DIVISION_ONLY = False
 TOP5_COUNTRIES = {"eng", "es", "de", "it", "fr"}
@@ -62,6 +60,7 @@ name_mapping_1 = {                                     # market_values.csv -> FI
     "Ivory Coast": "Côte d'Ivoire",
     "South Korea": "Korea Republic",
     "Turkiye": "Türkiye",
+    "Turkey": "Türkiye",
     "United States": "USA",
 }
 name_mapping_2 = {                                     # squads_fbref.csv -> FIFA spelling

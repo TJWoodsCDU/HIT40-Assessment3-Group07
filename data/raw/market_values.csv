@@ -1,49 +1,49 @@
-﻿club,team,age,WC_particip,Foreigners,mv_perc,market_value,
-England,England,25,25.8,17,24.00%,€1.56bn,€62.54m
-France,France,23,25.7,17,78.30%,€1.51bn,€65.48m
-Germany,Germany,43,25.8,21,27.90%,€1.36bn,€31.56m
-Spain,Spain,25,26.2,18,32.00%,€1.31bn,€52.22m
-Argentina,Argentina,33,26.3,20,87.90%,€1.03bn,€31.08m
-Portugal,Portugal,23,27.3,10,78.30%,€946.00m,€41.13m
-Brazil,Brazil,26,25.1,23,57.70%,€904.50m,€34.79m
-Netherlands,Netherlands,23,26.5,12,82.60%,€686.00m,€29.83m
-Norway,Norway,25,26.8,4,80.00%,€647.10m,€25.88m
-Belgium,Belgium,28,26.2,15,85.70%,€632.80m,€22.60m
-Morocco,Morocco,30,25.8,8,93.30%,€605.85m,€20.20m
-Senegal,Senegal,29,25.5,4,100.00%,€567.60m,€19.57m
-Ivory Coast,Ivory Coast,22,24.4,4,100.00%,€474.50m,€21.57m
-Croatia,Croatia,27,28.4,7,88.90%,€460.00m,€17.04m
-Sweden,Sweden,28,25.7,13,92.90%,€451.30m,€16.12m
-Turkiye,Turkiye,31,26.8,3,32.30%,€440.30m,€14.20m
-Switzerland,Switzerland,25,27.2,13,80.00%,€305.90m,€12.24m
-Japan,Japan,28,26.4,8,78.60%,€297.55m,€10.63m
-Uruguay,Uruguay,26,28.1,16,100.00%,€294.90m,€11.34m
-United States,United States,28,22.9,12,53.60%,€269.00m,€9.61m
-Austria,Austria,29,26.5,9,75.90%,€266.80m,€9.20m
-Colombia,Colombia,26,25.8,7,92.30%,€257.65m,€9.91m
-Algeria,Algeria,25,25.6,5,88.00%,€252.95m,€10.12m
-Mexico,Mexico,30,25.7,18,36.70%,€237.80m,€7.93m
-Czechia,Czechia,27,26.2,2,63.00%,€195.90m,€7.26m
-Bosnia-Herzegovina,Bosnia-Herzegovina,26,25.2,2,96.20%,€192.30m,€7.40m
-Ecuador,Ecuador,24,25.8,5,91.70%,€190.05m,€7.92m
-Scotland,Scotland,29,26.6,9,75.90%,€173.60m,€5.99m
-Democratic Republic of the Congo,Democratic Republic of the Congo,25,27.8,1,96.00%,€164.60m,€6.58m
-Paraguay,Paraguay,26,27.8,10,84.60%,€164.40m,€6.32m
-Ghana,Ghana,23,25.6,5,95.70%,€146.35m,€6.36m
-Canada,Canada,27,26.4,3,81.50%,€142.25m,€5.27m
-South Korea,South Korea,30,28.5,12,60.00%,€139.35m,€4.65m
-Egypt,Egypt,24,27.9,4,33.30%,€102.15m,€4.26m
-Uzbekistan,Uzbekistan,27,24.7,1,33.30%,€83.20m,€3.08m
-Australia,Australia,25,25.9,7,96.00%,€75.35m,€3.01m
-Cape Verde,Cape Verde,24,28.9,1,100.00%,€64.60m,€2.69m
-Haiti,Haiti,25,26.3,2,100.00%,€52.25m,€2.09m
-South Africa,South Africa,30,27.2,4,30.00%,€51.65m,€1.72m
-Tunisia,Tunisia,24,26.4,7,75.00%,€50.68m,€2.11m
-Panama,Panama,25,26,2,92.00%,€33.83m,€1.35m
-New Zealand,New Zealand,24,26.9,3,70.80%,€29.18m,€1.22m
-Iran,Iran,25,29.6,7,28.00%,€25.50m,€1.02m
-Curaçao,Curaçao,22,27.3,1,100.00%,€22.43m,€1.02m
-Jordan,Jordan,29,27.8,1,55.20%,€21.53m,€742k
-Saudi Arabia,Saudi Arabia,22,29.2,7,0.00%,€21.43m,€974k
-Qatar,Qatar,26,29.3,2,3.80%,€19.90m,€765k
-Iraq,Iraq,26,26.1,2,30.80%,€16.60m,€638k
+team,squad_size,avg_age,wc_participants,foreigners_pct,market_value,avg_market_value
+France,26,27.0,17,73.1%,€1.52bn,€58.58m
+England,26,27.2,17,19.2%,€1.36bn,€52.43m
+Spain,26,26.8,18,34.6%,€1.22bn,€47.03m
+Portugal,26,28.1,10,80.8%,€1.01bn,€38.67m
+Germany,26,28.1,21,26.9%,€947.00m,€36.42m
+Brazil,26,29.4,23,73.1%,€928.20m,€35.70m
+Argentina,26,29.1,20,92.3%,€807.50m,€31.06m
+Netherlands,26,27.8,12,92.3%,€754.20m,€29.01m
+Norway,26,26.8,4,84.6%,€589.90m,€22.69m
+Belgium,26,27.6,15,88.5%,€547.50m,€21.06m
+Ivory Coast,26,25.9,4,100.0%,€522.10m,€20.08m
+Senegal,26,27.1,4,100.0%,€478.10m,€18.39m
+Turkey,26,27.7,3,42.3%,€473.70m,€18.22m
+Morocco,26,26.6,8,92.3%,€447.70m,€17.22m
+Sweden,26,27.6,13,88.5%,€406.08m,€15.62m
+Croatia,26,28.4,7,92.3%,€387.30m,€14.90m
+United States,26,26.9,12,73.1%,€385.65m,€14.83m
+Ecuador,26,26.1,5,92.3%,€368.70m,€14.18m
+Uruguay,26,28.8,16,100.0%,€359.30m,€13.82m
+Switzerland,26,28.3,13,92.3%,€332.50m,€12.79m
+Colombia,26,30.1,7,96.2%,€302.35m,€11.63m
+Japan,25,27.6,8,92.0%,€266.85m,€10.67m
+Algeria,26,26.9,5,88.5%,€256.90m,€9.88m
+Austria,26,28.6,9,88.5%,€245.20m,€9.43m
+Ghana,27,26.8,5,96.3%,€234.60m,€8.69m
+Canada,26,27.0,3,92.3%,€198.65m,€7.64m
+Mexico,26,27.9,18,53.8%,€191.85m,€7.38m
+Czechia,26,27.6,2,34.6%,€188.18m,€7.24m
+Scotland,26,29.2,9,69.2%,€170.25m,€6.55m
+Paraguay,26,29.1,10,88.5%,€153.65m,€5.91m
+Bosnia and Herzegovina,26,26.4,2,96.2%,€151.60m,€5.83m
+Democratic Republic of the Congo,26,29.1,1,100.0%,€143.90m,€5.53m
+South Korea,26,28.1,12,73.1%,€139.05m,€5.35m
+Egypt,26,29.1,4,34.6%,€116.48m,€4.48m
+Uzbekistan,26,28.5,1,42.3%,€85.33m,€3.28m
+Australia,26,27.4,7,80.8%,€77.45m,€2.98m
+Tunisia,26,26.7,7,76.9%,€69.95m,€2.69m
+Haiti,26,27.6,2,96.2%,€55.90m,€2.15m
+Cape Verde,26,29.7,1,100.0%,€54.50m,€2.10m
+South Africa,26,26.8,4,26.9%,€49.25m,€1.89m
+Saudi Arabia,26,28.5,7,3.8%,€40.68m,€1.56m
+Panama,26,30.5,2,92.3%,€34.55m,€1.33m
+New Zealand,26,28.1,3,69.2%,€34.35m,€1.32m
+Iran,26,30.4,7,34.6%,€32.05m,€1.23m
+Curaçao,26,28.0,1,100.0%,€25.78m,€991k
+Iraq,26,26.9,2,61.5%,€21.20m,€815k
+Jordan,26,28.5,1,53.8%,€20.30m,€781k
+Qatar,26,29.5,2,3.8%,€19.93m,€766k

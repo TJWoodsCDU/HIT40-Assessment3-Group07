@@ -5,8 +5,8 @@ import config as C
 
 
 # ------------------------------------------------------------------ load
-def load(mode):
-    d = C.data_dir(mode)
+def load():
+    d = C.DATA_DIR
     matches = pd.read_csv(d / "matches.csv", parse_dates=["date", "prev_wc_date_a", "prev_wc_date_b"])
     teams = pd.read_csv(d / "teams.csv", parse_dates=["market_value_date"])
     form = pd.read_csv(d / "form.csv", parse_dates=["last_match_date"])
@@ -133,12 +133,12 @@ def check(matches, teams, form, d21, d22):
 
 
 # ------------------------------------------------------------------ main
-def main(mode):
-    matches, teams, form = load(mode)
+def main():
+    matches, teams, form = load()
     d21, d22 = build(matches, teams, form)
     problems, warnings, shared_names, shared_stats = check(matches, teams, form, d21, d22)
 
-    print(f"\n=== Merge checks ({mode} data) ===")
+    print("\n=== Merge checks ===")
     print(f"dataset_2_1: {d21.shape[0]} rows, {len(C.FEATURES_21)} variables")
     print(f"dataset_2_2: {d22.shape[0]} rows, {len(C.FEATURES_22)} variables")
     print(f"Shared by exact name: {len(shared_names)} {shared_names}")
@@ -152,11 +152,11 @@ def main(mode):
         sys.exit(1)
     print("All checks passed.")
 
-    out = C.out_dir(mode)
+    out = C.OUT_DIR
     d21.to_csv(out / "dataset_2_1.csv", index=False)
     d22.to_csv(out / "dataset_2_2.csv", index=False)
     print(f"Saved dataset_2_1.csv and dataset_2_2.csv to {out}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "dummy")
+    main()

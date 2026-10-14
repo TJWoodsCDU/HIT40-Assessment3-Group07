@@ -1,27 +1,3 @@
-"""
-models.py - fits the linear regression for each model, compares it with other scikit-learn
-regressors, and saves tables and figures (in outputs/<mode>/).
-
-How the evaluation works
-------------------------
-Each model predicts matches it has NOT seen. We use repeated 5-fold cross-validation: the matches
-are split into 5 parts, the model is trained on 4 parts and predicts the 5th, and this is repeated
-until every match has been predicted, then redone 10 times with different splits.
-The predictions are compared with the real World Cup 2026 results (R2, RMSE, MAE).
-In Model 2.2 the two rows of one match are always kept in the same part, otherwise the model could
-"peek" at the other side of the match it is predicting.
-
-Files saved for each model <m> (2_1 or 2_2):
-    model_comparison_<m>.csv      one row per algorithm, sorted by RMSE (lower is better)
-    fig_model_comparison_<m>.png  the same as a chart
-    ols_coefficients_<m>.csv      the linear regression: coefficients, p-values, confidence intervals
-    ols_summary_<m>.txt           full statsmodels summary + the most influential matches
-    fig_diagnostics_<m>.png       residuals vs fitted, Q-Q plot, residual histogram
-    fig_pred_vs_actual_<m>.png    predicted vs real result (linear regression and the best algorithm)
-    predictions_<m>.csv           out-of-sample prediction for every row
-
-Run:  python models.py 
-"""
 import sys
 import warnings
 import numpy as np
@@ -186,15 +162,15 @@ def run(model_key, d, feats, response, label, groups, out, count_data):
           f"(the repeat-to-repeat spread is about {lin.RMSE_sd:.3f}).")
 
 
-def main(mode):
-    out = C.out_dir(mode)
+def main():
+    out = C.OUT_DIR
     d21 = pd.read_csv(out / "dataset_2_1.csv")
     d22 = pd.read_csv(out / "dataset_2_2.csv")
-    print(f"=== Models ({mode} data) ===")
+    print("=== Models ===")
     run("2_1", d21, C.FEATURES_21, "goal_diff", "goal_diff", d21.match_id, out, count_data=False)
     run("2_2", d22, C.FEATURES_22, "goals_scored", "goals_scored", d22.match_id, out, count_data=True)
     print(f"\nSaved tables and figures to {out}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "dummy")
+    main()

@@ -11,9 +11,9 @@ COLOR, GOLD = "#1B4332", "#D4AF37"
 plt.rcParams.update({"axes.spines.top": False, "axes.spines.right": False, "font.size": 10})
 
 
-def main(mode):
-    out = C.out_dir(mode)
-    m = pd.read_csv(C.data_dir(mode) / "matches.csv", parse_dates=["date"])
+def main():
+    out = C.OUT_DIR
+    m = pd.read_csv(C.DATA_DIR / "matches.csv", parse_dates=["date"])
     # one row per team per match (the same shape as dataset_2_2)
     long = pd.concat([
         m.assign(team=m.team_a, goals=m.goals_a, host_team=(m.host_adv == 1)),
@@ -94,7 +94,7 @@ def main(mode):
 
     pd.set_option("display.width", 200)
     pd.set_option("display.max_colwidth", 70)
-    print(f"=== Response EDA ({mode} data) ===")
+    print("=== Response EDA ===")
     print(summary.round(3).to_string(index=False))
     print("\n" + pd.DataFrame(rows).fillna("").to_string(index=False))
     print("\nGoals per team: observed vs Poisson expected")
@@ -103,4 +103,4 @@ def main(mode):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "real")
+    main()
